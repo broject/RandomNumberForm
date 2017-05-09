@@ -1,0 +1,8 @@
+c:\users\master\documents\visual studio 2017\Projects\RandomNumberApp1\RandomNumberApp1\bin\Debug\RandomNumberApp1.exe
+c:\users\master\documents\visual studio 2017\Projects\RandomNumberApp1\RandomNumberApp1\bin\Debug\RandomNumberApp1.pdb
+c:\users\master\documents\visual studio 2017\Projects\RandomNumberApp1\RandomNumberApp1\obj\Debug\RandomNumberApp1.csprojResolveAssemblyReference.cache
+c:\users\master\documents\visual studio 2017\Projects\RandomNumberApp1\RandomNumberApp1\obj\Debug\RandomNumberApp1.Form1.resources
+c:\users\master\documents\visual studio 2017\Projects\RandomNumberApp1\RandomNumberApp1\obj\Debug\RandomNumberApp1.Properties.Resources.resources
+c:\users\master\documents\visual studio 2017\Projects\RandomNumberApp1\RandomNumberApp1\obj\Debug\RandomNumberApp1.csproj.GenerateResource.Cache
+c:\users\master\documents\visual studio 2017\Projects\RandomNumberApp1\RandomNumberApp1\obj\Debug\RandomNumberApp1.exe
+c:\users\master\documents\visual studio 2017\Projects\RandomNumberApp1\RandomNumberApp1\obj\Debug\RandomNumberApp1.pdb

@@ -25,7 +25,16 @@ namespace RandomNumberApp1
         {
             base.OnResize(e);
 
-            bool ifhe = (this.Height < 768);
+            bool ifhe = (this.ClientSize.Height <= 768);
+            bool ifwi = (this.ClientSize.Width <= 1366);
+
+            if (ifwi)
+            {
+                lblWinnerNumber.Font = new Font(this.Font.FontFamily, 200, FontStyle.Bold);
+            }
+
+            lblTitle.Top = 50;
+            lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
 
             lblWinnerNumber.Top = (this.ClientSize.Height - lblWinnerNumber.Height) / 2 - (ifhe ? 30 : 50);
             lblWinnerNumber.Left = (this.ClientSize.Width - lblWinnerNumber.Width) / 2;
@@ -34,7 +43,10 @@ namespace RandomNumberApp1
             btnStartStop.Left = (this.ClientSize.Width - btnStartStop.Width) / 2;
 
             btnClose.Top = 30;
-            btnClose.Left = this.Width - btnClose.Width - 30;
+            btnClose.Left = this.ClientSize.Width - btnClose.Width - 30;
+
+            picLeft.Top = this.ClientSize.Height - picLeft.Height;
+            picLeft.Left = this.ClientSize.Width - picLeft.Width - 50;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -42,9 +54,9 @@ namespace RandomNumberApp1
             base.OnLoad(e);
 
             this.WindowState = FormWindowState.Maximized;
-            
+
             timer = new Timer();
-            timer.Interval = 100;
+            timer.Interval = 70;
             timer.Tick += Timer_Tick;
             timer.Enabled = true;
             timer_running = false;
@@ -86,7 +98,7 @@ namespace RandomNumberApp1
             {
                 Random rnd = new Random();
                 int random = rnd.Next(Convert.ToInt32(numBeginNumber.Value), Convert.ToInt32(numEndNumber.Value));
-                string strNumber = addleft ("0", random.ToString(), 3);
+                string strNumber = addleft("0", random.ToString(), 3);
                 lblWinnerNumber.Text = strNumber;
             }
             else
@@ -120,15 +132,15 @@ namespace RandomNumberApp1
         {
             lblWinnerNumber.ForeColor = Color.White;
             timer_running = !timer_running;
-            
+
             if (timer_running)
             {
-                btnStartStop.Text = "Stop";
+                btnStartStop.Text = "ЗОГС";
             }
             else
             {
                 timer_winner = true;
-                btnStartStop.Text = "Start";
+                btnStartStop.Text = "ЭХЭЛ";
             }
         }
 

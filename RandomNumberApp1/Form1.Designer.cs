@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblWinnerNumber = new System.Windows.Forms.Label();
             this.btnStartStop = new System.Windows.Forms.Button();
             this.numBeginNumber = new System.Windows.Forms.NumericUpDown();
@@ -38,13 +39,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.picLeft = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numBeginNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEndNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeft)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWinnerNumber
             // 
             this.lblWinnerNumber.AutoSize = true;
+            this.lblWinnerNumber.BackColor = System.Drawing.Color.Maroon;
             this.lblWinnerNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 300F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinnerNumber.ForeColor = System.Drawing.Color.White;
             this.lblWinnerNumber.Location = new System.Drawing.Point(325, 73);
@@ -55,12 +60,12 @@
             // 
             // btnStartStop
             // 
-            this.btnStartStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartStop.Location = new System.Drawing.Point(464, 507);
+            this.btnStartStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartStop.Location = new System.Drawing.Point(540, 608);
             this.btnStartStop.Name = "btnStartStop";
-            this.btnStartStop.Size = new System.Drawing.Size(410, 151);
+            this.btnStartStop.Size = new System.Drawing.Size(250, 100);
             this.btnStartStop.TabIndex = 1;
-            this.btnStartStop.Text = "START";
+            this.btnStartStop.Text = "ЭХЭЛ";
             this.btnStartStop.UseVisualStyleBackColor = true;
             this.btnStartStop.Click += new System.EventHandler(this.btnStartStop_Click);
             // 
@@ -177,12 +182,37 @@
             this.linkLabel1.Text = "https://github.com/broject/RandomNumberForm";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // picLeft
+            // 
+            this.picLeft.BackColor = System.Drawing.Color.Transparent;
+            this.picLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLeft.BackgroundImage")));
+            this.picLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picLeft.Location = new System.Drawing.Point(1055, 544);
+            this.picLeft.Name = "picLeft";
+            this.picLeft.Size = new System.Drawing.Size(300, 250);
+            this.picLeft.TabIndex = 7;
+            this.picLeft.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.lblTitle.Location = new System.Drawing.Point(522, 14);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(367, 108);
+            this.lblTitle.TabIndex = 8;
+            this.lblTitle.Text = "АЗТАН";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1264, 730);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1485, 806);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.picLeft);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lstWinnerNumbers);
@@ -199,6 +229,7 @@
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.numBeginNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEndNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeft)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,6 +247,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox picLeft;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
 
